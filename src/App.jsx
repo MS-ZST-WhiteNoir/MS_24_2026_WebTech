@@ -6,10 +6,62 @@ import './App.css'
 
 function App() {
 
+  const app = {
+    name: "WebTech",
+    version: "1.0",
+    author: "Twoje imię i nazwisko",
+    technologiesCount: 3};
+
+  const technology = {
+  name: "React",
+  category: "Frontend",
+  hours: 30,
+  active: true};
+
+  const student = {
+  name: "Maciej",
+  surname: "Skrabot",
+  className: "4P",
+  specialization: "technik programista"};
+
+  const course = {
+  name: "Maciej",
+  teacher: "Rafał",
+  hours: "4",
+  completed: "Tak"};
+
   return (
-    <>
-    
-    </>
+    <div>
+
+      <h1>{app.name}</h1>
+
+      <p>Wersja: {app.version}</p>
+
+      <p>Autor: {app.author}</p>
+
+      <p>
+        Liczba technologii: {app.technologiesCount}
+      </p>
+
+      <p>{technology.name}</p>
+
+      <p>Kategoria: {technology.category}</p>
+
+      <p>Liczba godzin: {technology.hours}</p>
+
+      <p>Uczeń: {student.name} {student.surname}</p>
+
+      <p>Klasa: {student.className}</p>
+
+      <p>Kierunek: {student.specialization}</p>
+
+      <section>
+        <h2 className="naglowek">Teacher: {course.teacher}</h2>
+        <p>Student: {course.name}</p>
+        <p>Hours: {course.hours}</p>
+        <p>Completed: {course.completed}</p>
+      </section>
+    </div>
   )
 }
 

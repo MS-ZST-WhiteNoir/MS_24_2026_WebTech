@@ -54,6 +54,11 @@ body {
   margin: 0;
 }
 
+.naglowek{
+  background-color: aqua;
+  color: black;
+}
+
 #root {
   width: 1126px;
   max-width: 100%;
