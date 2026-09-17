@@ -3,39 +3,26 @@ import heroImg from './assets/hero.png'
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import './App.css'
+import Header from './components/Header'
+import Technology from './components/Technology'
+import Footer from './components/Footer'
+import Student from './components/Student'
+import InfoBox from './components/InfoBox'
+import Navigation from './components/Navigation'
+import CourseCard from './components/CourseCard'
 
 function App() {
 
-  function Header(){
-    return(
-      <div>
-        <h1>Header WebTech - MS</h1>
-      </div>
-    )
-  }
-
-  function Technology() {
-    return (
-      <div>
-        <h2>React</h2>
-        <p>Technologia frontendowa</p>
-      </div>
-    )
-  }
-
-  function Footer() {
-    return (
-      <div>
-        <p>Projekt React</p>
-      </div>
-    )
-  }
-
   return (
     <>
-      <Header/>
-        <Technology/>
-      <Footer/>
+      <header/>
+      <Navigation/>
+      <main>
+      <InfoBox/>
+      <Student/>
+      </main>
+      <CourseCard/>
+      <Technology/>
     </>
   )
 }

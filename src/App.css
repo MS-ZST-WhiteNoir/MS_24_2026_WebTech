@@ -16,6 +16,13 @@
     outline-offset: 2px;
   }
 }
+.section{
+  background-color: aquamarine;
+  color: green;
+}
+.h2{
+  color: red;
+}
 
 .hero {
   position: relative;
