@@ -6,62 +6,37 @@ import './App.css'
 
 function App() {
 
-  const app = {
-    name: "WebTech",
-    version: "1.0",
-    author: "Twoje imię i nazwisko",
-    technologiesCount: 3};
+  function Header(){
+    return(
+      <div>
+        <h1>Header WebTech - MS</h1>
+      </div>
+    )
+  }
 
-  const technology = {
-  name: "React",
-  category: "Frontend",
-  hours: 30,
-  active: true};
+  function Technology() {
+    return (
+      <div>
+        <h2>React</h2>
+        <p>Technologia frontendowa</p>
+      </div>
+    )
+  }
 
-  const student = {
-  name: "Maciej",
-  surname: "Skrabot",
-  className: "4P",
-  specialization: "technik programista"};
-
-  const course = {
-  name: "Maciej",
-  teacher: "Rafał",
-  hours: "4",
-  completed: "Tak"};
+  function Footer() {
+    return (
+      <div>
+        <p>Projekt React</p>
+      </div>
+    )
+  }
 
   return (
-    <div>
-
-      <h1>{app.name}</h1>
-
-      <p>Wersja: {app.version}</p>
-
-      <p>Autor: {app.author}</p>
-
-      <p>
-        Liczba technologii: {app.technologiesCount}
-      </p>
-
-      <p>{technology.name}</p>
-
-      <p>Kategoria: {technology.category}</p>
-
-      <p>Liczba godzin: {technology.hours}</p>
-
-      <p>Uczeń: {student.name} {student.surname}</p>
-
-      <p>Klasa: {student.className}</p>
-
-      <p>Kierunek: {student.specialization}</p>
-
-      <section>
-        <h2 className="naglowek">Teacher: {course.teacher}</h2>
-        <p>Student: {course.name}</p>
-        <p>Hours: {course.hours}</p>
-        <p>Completed: {course.completed}</p>
-      </section>
-    </div>
+    <>
+      <Header/>
+        <Technology/>
+      <Footer/>
+    </>
   )
 }
 
