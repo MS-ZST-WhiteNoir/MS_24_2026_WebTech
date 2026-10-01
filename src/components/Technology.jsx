@@ -1,12 +1,16 @@
-function Technology(props) {
+function Produkt({ name, category, hours, onFlow }) {
+
     return (
       <section>
-        <h4>Technologia</h4>
-        <p>Nazwa: {props.name}</p>
-        <p>Kategoria: {props.category}</p>
-        <p>Liczba godzin: {props.hours}</p>
-      </section>
+        <h2>{name}</h2>
+        <p>{category}</p>
+        <p>{hours}</p>
+
+        <button onClick={()=> onFlow(name)}>
+          Wybierz
+        </button>
+    </section>
     )
   }
 
-  export default Technology;
+  export default Produkt;

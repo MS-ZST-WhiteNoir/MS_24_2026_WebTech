@@ -12,15 +12,21 @@ import Navigation from './components/Navigation'
 import CourseCard from './components/CourseCard'
 import StudentCard from './components/StudentCard'
 import Book from './components/Book'
+import Produkt from './components/Produkt'
 
 function App() {
 
-  const numbers = [1, 2, 3, 4, 5];
-  const auta = [
-    {id: 1, brand: "Toyota", model: "Corolla"},
-    {id: 2, brand: "Honda", model: "Civic"},
-    {id: 3, brand: "Ford", model: "Focus"}
-  ]
+  function showTechnology(name) {
+    console.log("Wybrano: " + name);
+  }
+
+  function selectTechnology(name) {
+    console.log("Wybrano: " + name);
+  }
+  function selectProduct(name) {
+    console.log("Wybrano produkt: " + name);
+  }
+
   const technologies = [
     {
       id: 1,
@@ -53,60 +59,33 @@ function App() {
       hours: 20
     }
   ]
-  const students = [
-  { id: 1, name: "Anna", className: "4P", age: 17, specialization: "Graphic" },
-  { id: 2, name: "Jan", className: "4P", age: 18, specialization: "Design" },
-  { id: 3, name: "Adam", className: "4P", age: 17, specialization: "Code" },
-  { id: 4, name: "Marek", className: "4P", age: 19, specialization: "Design" }
-  ];
-  const books = [
-{ id: 1, title: "Wiedźmin", author: "Andrzej Sapkowski" },
-{ id: 2, title: "Hobbit", author: "J.R.R. Tolkien" },
-{ id: 3, title: "Lalka", author: "Bolesław Prus" }
-]
+
 
   return (
     <>
-        <h2>Technologie</h2>
-        {technologies.map((technology) => (
-          <Technology
-            key={technology.id}
-            name={technology.name}
-            category={technology.category}
-            hours={technology.hours}
-          />
-        ))}
-      <h2>Students</h2>
-      {students.map((student) => {
-        return (
-          <Student
-            key={student.id}
-            name={student.name}
-            className={student.className}
-            age={student.age}
-            specialization={student.specialization}
-          />
-        )
-        
-      })}
-
-      <h2>Książki</h2>
-      {books.map((book) => (
-        <Book
-          key={book.id}
-          title={book.title}
-          author={book.author}
-        />
-      ))}
-      <h2>Książki</h2>
-      {books.map((book) => {
-        return (
-        <Book
-          key={book.id}
-          title={book.title}
-          author={book.author}
-        />
-      )})}
+      <Produkt
+        name="Laptop"
+        price={3000}
+        onClick={selectProduct}
+      />
+      <Technology
+        name="React"
+        category="Frontend"
+        hours={30}
+        onFlow={selectTechnology}
+      />
+      <Technology
+        name="MySQL"
+        category="Baza"
+        hours={20}
+        onFlow={selectTechnology}
+      />
+      <Technology
+        name="Java"
+        category="Backend"
+        hours={25}
+        onFlow={selectTechnology}
+      />
     </>
   )
 }
