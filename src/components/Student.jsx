@@ -1,11 +1,14 @@
-function Student(){
+function Student(props ){
     return(
-        <>
-      <div>
-        <p>Maciej Skrabot</p>
-        <p>4P</p>
-        <p>Programowanie</p>
-      </div>
+      <>
+        <section>
+        <p>Imię: {props.name}</p>
+          <p>Klasa: {props.className}</p>
+          <p>Wiek: {props.age}</p>
+          <p>Specjalizacja: {props.specialization}</p>
+          <br></br>
+      </section>
+      
       </>
     )
   }
