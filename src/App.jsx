@@ -33,22 +33,16 @@ gradesAverage: 4.75,
 isActive: true
 };
 
+  const numbers = [1, 2, 3, 4, 5];
 
   return (
     <>
-      <Header/>
-      <StudentCard student={studentOne}/>
-      <Technology name="React" category="frontend" hours = {150} 
-      specyfikacja = {specifications} features={features}/>
-      <Technology name="PHP" category="backend" hours = {140}
-      specyfikacja = {specifications} features={features}/>
-      <Technology name="JavaScript" category="frontend" hours = {120}
-      specyfikacja = {specifications} features={features}/>
-      <Technology name="Angular" category="frontend" hours = {110}
-      specyfikacja = {specifications} features={features}/>
-      <Technology name="Mysql" category="backend" hours = {130}
-        specyfikacja={specifications} features={features} />
-      <Technology/>
+      asdasd
+      {
+        numbers.map((number) => {
+          return (<p>{number}</p>)
+        })
+      }
     </>
   )
 }
