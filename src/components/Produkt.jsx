@@ -1,12 +1,12 @@
-function Produkt({ name, price, onClick}) {
+function Produkt({ name, price, onSelect}) {
 
     return (
       <section>
         <h2>{name}</h2>
         <p>{price}</p>
 
-        <button onClick={()=> onClick(name)}>
-          Pokaż produkt
+        <button onClick={()=> onSelect(name)}>
+          Wybierz
         </button>
     </section>
     )

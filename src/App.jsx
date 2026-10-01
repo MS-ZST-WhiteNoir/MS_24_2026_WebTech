@@ -13,6 +13,7 @@ import CourseCard from './components/CourseCard'
 import StudentCard from './components/StudentCard'
 import Book from './components/Book'
 import Produkt from './components/Produkt'
+import User from './components/user'
 
 function App() {
 
@@ -25,6 +26,10 @@ function App() {
   }
   function selectProduct(name) {
     console.log("Wybrano produkt: " + name);
+  }
+  function selectUser(name, role) {
+    console.log("Użytkownik: " + name);
+    console.log("Rola: " + role);
   }
 
   const technologies = [
@@ -63,10 +68,15 @@ function App() {
 
   return (
     <>
+      <User
+        name="Anna"
+        role="Administrator"
+        onFlow={selectUser}
+      />
       <Produkt
         name="Laptop"
-        price={3000}
-        onClick={selectProduct}
+        price={3500}
+        onSelect={selectProduct}
       />
       <Technology
         name="React"
