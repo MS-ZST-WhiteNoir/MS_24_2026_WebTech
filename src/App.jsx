@@ -11,6 +11,7 @@ import InfoBox from './components/InfoBox'
 import Navigation from './components/Navigation'
 import CourseCard from './components/CourseCard'
 import StudentCard from './components/StudentCard'
+import Book from './components/Book'
 
 function App() {
 
@@ -38,6 +39,18 @@ function App() {
       name: "MySQL",
       category: "baza",
       hours: 40
+    },
+    {
+      id: 4,
+      name: "Express",
+      category: "Backend",
+      hours: 25
+    },
+    {
+      id: 5,
+      name: "MongoDB",
+      category: "Baza danych",
+      hours: 20
     }
   ]
   const students = [
@@ -45,7 +58,12 @@ function App() {
   { id: 2, name: "Jan", className: "4P", age: 18, specialization: "Design" },
   { id: 3, name: "Adam", className: "4P", age: 17, specialization: "Code" },
   { id: 4, name: "Marek", className: "4P", age: 19, specialization: "Design" }
-];
+  ];
+  const books = [
+{ id: 1, title: "Wiedźmin", author: "Andrzej Sapkowski" },
+{ id: 2, title: "Hobbit", author: "J.R.R. Tolkien" },
+{ id: 3, title: "Lalka", author: "Bolesław Prus" }
+]
 
   return (
     <>
@@ -71,6 +89,24 @@ function App() {
         )
         
       })}
+
+      <h2>Książki</h2>
+      {books.map((book) => (
+        <Book
+          key={book.id}
+          title={book.title}
+          author={book.author}
+        />
+      ))}
+      <h2>Książki</h2>
+      {books.map((book) => {
+        return (
+        <Book
+          key={book.id}
+          title={book.title}
+          author={book.author}
+        />
+      )})}
     </>
   )
 }
