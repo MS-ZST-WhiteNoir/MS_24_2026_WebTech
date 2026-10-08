@@ -1,4 +1,3 @@
-
 function InfoBox(){
 
   function selectInfo(name){
@@ -8,7 +7,6 @@ function InfoBox(){
   const technologies = ["React", "JavaScript", "CSS"];
 
     return(
-        <>
       <div>
         {technologies.map((tech, index) => (
           <div key={index}>
@@ -19,7 +17,6 @@ function InfoBox(){
         </div>  
         ))}
       </div>
-      </>
     )
   }
 

@@ -1,16 +1,13 @@
-function Produkt({ name, category, hours, onFlow }) {
+function Technology(props) {
 
-    return (
-      <section>
-        <h2>{name}</h2>
-        <p>{category}</p>
-        <p>{hours}</p>
-
-        <button onClick={()=> onFlow(name)}>
-          Wybierz
-        </button>
+  return (
+    <section>
+      <img src={`./images/${props.tech.image}`} alt=""/>
+      <h2>{props.tech.name}</h2>
+      <p>{props.tech.category}</p>
+      <p>{props.tech.hours}</p>
     </section>
-    )
-  }
+  )
+}
 
-  export default Produkt;
+export default Technology;
