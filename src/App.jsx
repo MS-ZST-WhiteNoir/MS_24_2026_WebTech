@@ -31,43 +31,22 @@ function App() {
     console.log("Użytkownik: " + name);
     console.log("Rola: " + role);
   }
+  function selectInfo(name){
+    console.log("Kliknięto technologie: " + name);
+  }
 
-  const technologies = [
-    {
-      id: 1,
-      name: "App.jsx",
-      category: "frontend",
-      hours: 30
-    },
-    {
-      id: 2,
-      name: "Node.js",
-      category: "backend",
-      hours: 20
-    },
-    {
-      id: 3,
-      name: "MySQL",
-      category: "baza",
-      hours: 40
-    },
-    {
-      id: 4,
-      name: "Express",
-      category: "Backend",
-      hours: 25
-    },
-    {
-      id: 5,
-      name: "MongoDB",
-      category: "Baza danych",
-      hours: 20
-    }
-  ]
+  const technologies = ["React", "JavaScript", "CSS"];
 
 
   return (
     <>
+    {technologies.map((tech) => (
+      <InfoBox
+        key={tech}
+        name={tech}
+        onClick={selectInfo}
+      />
+    ))}
       <User
         name="Anna"
         role="Administrator"
