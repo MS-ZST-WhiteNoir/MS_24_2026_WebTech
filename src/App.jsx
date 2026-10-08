@@ -17,64 +17,11 @@ import User from './components/user'
 
 function App() {
 
-  function showTechnology(name) {
-    console.log("Wybrano: " + name);
-  }
-
-  function selectTechnology(name) {
-    console.log("Wybrano: " + name);
-  }
-  function selectProduct(name) {
-    console.log("Wybrano produkt: " + name);
-  }
-  function selectUser(name, role) {
-    console.log("Użytkownik: " + name);
-    console.log("Rola: " + role);
-  }
-  function selectInfo(name){
-    console.log("Kliknięto technologie: " + name);
-  }
-
-  const technologies = ["React", "JavaScript", "CSS"];
-
-
   return (
     <>
-    {technologies.map((tech) => (
-      <InfoBox
-        key={tech}
-        name={tech}
-        onClick={selectInfo}
-      />
-    ))}
-      <User
-        name="Anna"
-        role="Administrator"
-        onFlow={selectUser}
-      />
-      <Produkt
-        name="Laptop"
-        price={3500}
-        onSelect={selectProduct}
-      />
-      <Technology
-        name="React"
-        category="Frontend"
-        hours={30}
-        onFlow={selectTechnology}
-      />
-      <Technology
-        name="MySQL"
-        category="Baza"
-        hours={20}
-        onFlow={selectTechnology}
-      />
-      <Technology
-        name="Java"
-        category="Backend"
-        hours={25}
-        onFlow={selectTechnology}
-      />
+    <h1>Technologie</h1>
+      <InfoBox/>
+  
     </>
   )
 }

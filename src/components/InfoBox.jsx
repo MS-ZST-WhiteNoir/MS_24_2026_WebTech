@@ -1,11 +1,23 @@
-function InfoBox({name, onClick}){
+
+function InfoBox(){
+
+  function selectInfo(name){
+    console.log("Kliknięto technologie: " + name);
+  }
+
+  const technologies = ["React", "JavaScript", "CSS"];
+
     return(
         <>
       <div>
-          <p>{name}</p>
-          <button onClick={()=> onClick(name)}>
-          {name}
-        </button>       
+        {technologies.map((tech, index) => (
+          <div key={index}>
+          <p>{tech}</p>
+          <button onClick={()=> selectInfo(tech)}>
+          {tech}
+        </button>     
+        </div>  
+        ))}
       </div>
       </>
     )
